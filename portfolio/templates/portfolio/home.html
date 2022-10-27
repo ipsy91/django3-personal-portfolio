@@ -1,0 +1,23 @@
+{% extends 'portfolio/base.html' %}
+{% block content %}
+
+{% load static %}
+<div class="row justify-content-center my-3">
+    <div class="col-5">
+        <img src="{% static 'portfolio/listening-to-music-9.jpg' %}" height="640" width="400"class="img-fluid"  >
+  </div>
+</div>
+<div class="row">
+{% for project in projects %}
+    <div class="col-lg-4 col-md-6">
+
+
+        <img src="{{project.image.url}}" class="img-fluid mb-2" >
+        <h2>{{project.title}}</h2>
+
+    </div>
+{% endfor %}
+ </div>
+{% endblock %}
+
+
